@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#Assuming your log file is named "webserver.log"
+
+awk '{print $1}' "$log_file" | sort | uniq -c | sort -rn | head -n 11
